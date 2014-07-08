@@ -1,0 +1,67 @@
+.search-overlay {
+
+	display: none;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 9999;
+	background-color: #ffffff;
+	
+	&.open {
+		display: block;
+	}
+	
+	.search-close {
+		background: transparent;
+		border: none;
+		font-size: 2em;
+		outline: none;
+		position: absolute;
+		top: 0.5em;
+		right: 1em;
+		z-index: 100;
+	}
+	
+	form {
+
+		margin: 75px auto 40px;
+		max-width: 1200px;
+		position:relative;
+		top: 20%;
+		width: 75%;
+		
+		input {
+			background: none;
+			border: none;
+			font-size: 50px;
+			font-weight: 300;
+			height: 70px;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.search-overlay {
+
+		.search-close {
+			font-size: 1.5em;
+			right: -15px !important;
+			top: 5px !important;
+		}
+
+		form {
+
+			margin: 0px 0px 0px 10px;
+			top: 50px;
+
+			input {
+				font-size: 25px;
+				height: 35px;
+			}
+		}
+	}
+}
